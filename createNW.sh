@@ -139,5 +139,5 @@ if [[ ! "$nwID_old" == "" && $disconnectCount -gt 0 ]]; then
     done
 fi
 
-docker network inspect ${nwID_old} | jq 
+docker network inspect ${nwID_new} | jq 
 docker network inspect ${nwID_new} | jq >> ./${theNetwork}.txt
